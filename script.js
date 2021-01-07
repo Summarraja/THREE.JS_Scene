@@ -155,7 +155,7 @@ function init() {
 	moonLight.castShadow = true;
 	// Will not light anything closer than 0.1 units or further than 500 units
 	moonLight.shadow.camera.near = 0.1;
-	moonLight.shadow.camera.far = 500;
+	moonLight.shadow.camera.far = 1000;
 	moonLight.position.set(0, 0, 400);
 
 
