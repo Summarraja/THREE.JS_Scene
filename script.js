@@ -14,7 +14,7 @@ function init() {
 
 	var lightWoodLoader = new THREE.TextureLoader();
 	lightWoodLoader.crossOrigin = '';
-	var lightWoodTexture = lightWoodLoader.load('http://www.textures4photoshop.com/tex/thumbs/free-wood-texture-with-high-resolution-thumb38.jpg', function (texture) {
+	var lightWoodTexture = lightWoodLoader.load('textures/LightWood_Texture.jpg', function (texture) {
 
 		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 		texture.offset.set(0, 0);
@@ -24,7 +24,7 @@ function init() {
 	lightWoodMaterial = new THREE.MeshPhongMaterial({ map: lightWoodTexture });
 	var darkWoodLoader = new THREE.TextureLoader();
 	darkWoodLoader.crossOrigin = '';
-	var darkWoodTexture = darkWoodLoader.load('http://www.textures4photoshop.com/tex/thumbs/braided-wood-texture-material-free-thumb34.jpg', function (texture) {
+	var darkWoodTexture = darkWoodLoader.load('textures/DarkWood_Texture.jpg', function (texture) {
 
 		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 		texture.offset.set(0, 0);
@@ -167,12 +167,12 @@ function init() {
 
 	// ==========================================  Floor ===========================================================================
 
-	//THREE.ImageUtils.crossOrigin = '';
-	//var texture = THREE.ImageUtils.loadTexture('http://www.textures4photoshop.com/tex/thumbs/seamless-wood-floor-texture-thumb27.jpg');
+	// THREE.ImageUtils.crossOrigin = '';
+	// var planeTexture = THREE.ImageUtils.loadTexture('textures/Grass_Texture.jpg');
 
 	var planeLoader = new THREE.TextureLoader();
-	planeLoader.crossOrigin = '';
-	var planeTexture = planeLoader.load('http://www.textures4photoshop.com/tex/thumbs/seamless-grass-texture-free-thumb27.jpg', function (texture) {
+	//planeLoader.crossOrigin = null;
+	var planeTexture = planeLoader.load('textures/Grass_Texture.jpg', function (texture) {
 
 		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 		texture.offset.set(0, 0);
@@ -242,8 +242,8 @@ function animate() {
 	requestAnimationFrame(animate);
 	//sunrise
 	if (sun.rotation.x > 0 && sun.rotation.x < Math.PI / 2 && scene.background.g < 0.9) {
-		console.log(scene.background.g);
-		console.log(sun.rotation.x);
+		// console.log(scene.background.g);
+		// console.log(sun.rotation.x);
 		scene.background.r += 0.002;
 		scene.background.g += 0.002;
 		scene.background.b += 0.0025;
@@ -301,7 +301,7 @@ function animate() {
 function createTree() {
 	var treeLoader = new THREE.TextureLoader();
 	treeLoader.crossOrigin = '';
-	var treeTexture = treeLoader.load('http://www.textures4photoshop.com/tex/thumbs/christmas-tree-fir-texture-free-background-40.jpg', function (texture) {
+	var treeTexture = treeLoader.load('textures/Tree_Texture.jpg', function (texture) {
 
 		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 		texture.offset.set(0, 0);
@@ -410,7 +410,7 @@ function createTable() {
 function createWall() {
 	var wallLoader = new THREE.TextureLoader();
 	wallLoader.crossOrigin = '';
-	var wallTexture = wallLoader.load('http://www.textures4photoshop.com/tex/thumbs/white-brick-wall-seamless-texture-free-thumb38.jpg', function (texture) {
+	var wallTexture = wallLoader.load('textures/Wall_Texture.jpg', function (texture) {
 
 		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 		texture.offset.set(1, 1);
